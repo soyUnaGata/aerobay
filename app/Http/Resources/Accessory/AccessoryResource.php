@@ -14,6 +14,19 @@ class AccessoryResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'title' => $this->title,
+            'description' => $this->description,
+            'price' => $this->price,
+            'discount' => $this->discount,
+            'image_url' => $this->image_url,
+            'dimensions' => $this->dimensions,
+            'weight' => $this->weight,
+            'color'=> $this->color,
+            'type'=> $this->type,
+            'category_id' => $this->category_id,
+            'manufacturer_id' => $this->manufacturer_id,
+        ];
     }
 }

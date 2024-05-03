@@ -31,8 +31,8 @@ class UpdateRequest extends FormRequest
             'weight' => 'nullable|string',
             'color'=> 'nullable|string',
             'type'=> 'nullable|string',
-            'category_id' => 'string',
-            'manufacturer_id' => 'string',
+            'category_id' => 'integer',
+            'manufacturer_id' => 'integer',
         ];
     }
 }

@@ -32,7 +32,7 @@ class StoreRequest extends FormRequest
             'color'=> 'nullable|string',
             'type'=> 'nullable|string',
             'category_id' => 'integer',
-            'manufacturer_id' => 'string',
+            'manufacturer_id' => 'integer',
         ];
     }
 }
