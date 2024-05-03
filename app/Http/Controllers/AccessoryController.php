@@ -8,7 +8,7 @@ use App\Http\Resources\Accessory\AccessoryResource;
 use App\Models\Accessory;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Tests\Integration\Http\Fixtures\PostResource;
+
 
 class AccessoryController extends Controller
 {
@@ -37,7 +37,7 @@ class AccessoryController extends Controller
      */
     public function show(Accessory $accessory)
     {
-        return PostResource::make($accessory);
+        return AccessoryResource::make($accessory);
     }
 
     /**
@@ -47,6 +47,8 @@ class AccessoryController extends Controller
     {
         $data = $request->validated();
         $accessory->update($data);
+
+//        $accessory = $accessory->fresh();
         return AccessoryResource::make($accessory);
     }
 
