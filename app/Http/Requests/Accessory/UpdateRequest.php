@@ -27,6 +27,10 @@ class UpdateRequest extends FormRequest
             'price' => 'numeric',
             'discount' => 'nullable|numeric',
             'image_url' => 'nullable|url',
+            'dimensions' => 'nullable|string',
+            'weight' => 'nullable|string',
+            'color'=> 'nullable|string',
+            'type'=> 'nullable|string',
             'category_id' => 'string',
             'manufacturer_id' => 'string',
         ];
