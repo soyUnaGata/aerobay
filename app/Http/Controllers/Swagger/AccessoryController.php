@@ -23,6 +23,7 @@ use App\Http\Controllers\Controller;
  *                      @OA\Property(property="weight", type="string", example="1200g"),
  *                      @OA\Property(property="color", type="string", example="Black"),
  *                      @OA\Property(property="type", type="string", example="Camera"),
+ *                      @OA\Property(property="count", type="integer", example=15),
  *                      @OA\Property(property="category_id", type="integer", example=5),
  *                      @OA\Property(property="manufacturer_id", type="integer", example=1),
  *                  )
@@ -44,6 +45,7 @@ use App\Http\Controllers\Controller;
  *                  @OA\Property(property="weight", type="string", example="1200g"),
  *                  @OA\Property(property="color", type="string", example="Black"),
  *                  @OA\Property(property="type", type="string", example="Camera"),
+ *                  @OA\Property(property="count", type="integer", example=15),
  *                  @OA\Property(property="category_id", type="integer", example=5),
  *                  @OA\Property(property="manufacturer_id", type="integer", example=1),
  *              )
@@ -72,6 +74,7 @@ use App\Http\Controllers\Controller;
  *                   @OA\Property(property="weight", type="string", example="1200g"),
  *                   @OA\Property(property="color", type="string", example="Black"),
  *                   @OA\Property(property="type", type="string", example="Camera"),
+ *                   @OA\Property(property="count", type="integer", example=15),
  *                   @OA\Property(property="category_id", type="integer", example=5),
  *                   @OA\Property(property="manufacturer_id", type="integer", example=1),
  *               )
@@ -108,6 +111,7 @@ use App\Http\Controllers\Controller;
  *                    @OA\Property(property="weight", type="string", example="1200g"),
  *                    @OA\Property(property="color", type="string", example="Black"),
  *                    @OA\Property(property="type", type="string", example="Camera"),
+ *                    @OA\Property(property="count", type="integer", example=15),
  *                    @OA\Property(property="category_id", type="integer", example=5),
  *                    @OA\Property(property="manufacturer_id", type="integer", example=1),
  *                )
@@ -142,6 +146,7 @@ use App\Http\Controllers\Controller;
  *                       @OA\Property(property="weight", type="string", example="1200g"),
  *                       @OA\Property(property="color", type="string", example="Black"),
  *                       @OA\Property(property="type", type="string", example="Camera"),
+ *                       @OA\Property(property="count", type="integer", example=15),
  *                       @OA\Property(property="category_id", type="integer", example=5),
  *                       @OA\Property(property="manufacturer_id", type="integer", example=1),
  *                   )
@@ -163,6 +168,7 @@ use App\Http\Controllers\Controller;
  *                     @OA\Property(property="weight", type="string", example="1200g"),
  *                     @OA\Property(property="color", type="string", example="Black"),
  *                     @OA\Property(property="type", type="string", example="Camera"),
+ *                     @OA\Property(property="count", type="integer", example=15),
  *                     @OA\Property(property="category_id", type="integer", example=5),
  *                     @OA\Property(property="manufacturer_id", type="integer", example=1),
  *                 )
