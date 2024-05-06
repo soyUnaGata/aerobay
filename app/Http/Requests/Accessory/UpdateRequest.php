@@ -31,6 +31,7 @@ class UpdateRequest extends FormRequest
             'weight' => 'nullable|string',
             'color'=> 'nullable|string',
             'type'=> 'nullable|string',
+            'count'=> 'nullable|integer',
             'category_id' => 'integer',
             'manufacturer_id' => 'integer',
         ];

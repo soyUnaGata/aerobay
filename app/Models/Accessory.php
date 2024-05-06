@@ -20,6 +20,7 @@ class Accessory extends Model
         'weight',
         'color',
         'type',
+        'count',
         'category_id',
         'manufacturer_id'
     ];
