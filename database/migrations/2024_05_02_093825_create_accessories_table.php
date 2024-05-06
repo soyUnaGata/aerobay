@@ -23,7 +23,8 @@ return new class extends Migration
             $table->string('color')->nullable();
             $table->string('type')->nullable();
             $table->integer('count')->nullable(0);
-            $table->integer('category_id')->default(0)->nullable();
+
+            $table->foreignId('category_id')->nullable()->index()->constrained('categories');
             $table->integer('manufacturer_id')->nullable();
             $table->timestamps();
         });
