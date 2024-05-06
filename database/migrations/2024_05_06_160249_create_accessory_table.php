@@ -25,7 +25,8 @@ return new class extends Migration
             $table->integer('count')->nullable(0);
 
             $table->foreignId('category_id')->nullable()->index()->constrained('categories');
-            $table->integer('manufacturer_id')->nullable();
+            $table->foreignId('manufacturer_id')->nullable()->index()->constrained('manufactories');
+
             $table->timestamps();
         });
     }
@@ -35,6 +36,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('accessories');
+        Schema::dropIfExists('accessory');
     }
 };
