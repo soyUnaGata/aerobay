@@ -66,6 +66,10 @@
                                                         "type": "string",
                                                         "example": "Camera"
                                                     },
+                                                    "count": {
+                                                        "type": "integer",
+                                                        "example": 15
+                                                    },
                                                     "category_id": {
                                                         "type": "integer",
                                                         "example": 5
@@ -140,6 +144,10 @@
                                                 "type": "string",
                                                 "example": "Camera"
                                             },
+                                            "count": {
+                                                "type": "integer",
+                                                "example": 15
+                                            },
                                             "category_id": {
                                                 "type": "integer",
                                                 "example": 5
@@ -206,6 +214,10 @@
                                                 "type": {
                                                     "type": "string",
                                                     "example": "Camera"
+                                                },
+                                                "count": {
+                                                    "type": "integer",
+                                                    "example": 15
                                                 },
                                                 "category_id": {
                                                     "type": "integer",
@@ -298,6 +310,10 @@
                                                     "type": {
                                                         "type": "string",
                                                         "example": "Camera"
+                                                    },
+                                                    "count": {
+                                                        "type": "integer",
+                                                        "example": 15
                                                     },
                                                     "category_id": {
                                                         "type": "integer",
@@ -419,6 +435,10 @@
                                                 "type": "string",
                                                 "example": "Camera"
                                             },
+                                            "count": {
+                                                "type": "integer",
+                                                "example": 15
+                                            },
                                             "category_id": {
                                                 "type": "integer",
                                                 "example": 5
@@ -488,6 +508,10 @@
                                                         "type": "string",
                                                         "example": "Camera"
                                                     },
+                                                    "count": {
+                                                        "type": "integer",
+                                                        "example": 15
+                                                    },
                                                     "category_id": {
                                                         "type": "integer",
                                                         "example": 5
@@ -495,6 +519,284 @@
                                                     "manufacturer_id": {
                                                         "type": "integer",
                                                         "example": 1
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            }
+        },
+        "/api/categories": {
+            "get": {
+                "tags": [
+                    "Category"
+                ],
+                "summary": "List of categories",
+                "operationId": "fda83319ea87b70fdda27e40a948692b",
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "name": {
+                                                        "type": "string",
+                                                        "example": "Scaner"
+                                                    },
+                                                    "description": {
+                                                        "type": "string",
+                                                        "example": "Some description"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Category"
+                ],
+                "summary": "Create new category",
+                "operationId": "5befb384353e20ca29b5464c59701011",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "name": {
+                                                "type": "string",
+                                                "example": "Scaner"
+                                            },
+                                            "description": {
+                                                "type": "string",
+                                                "example": "Some description"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Category added successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "name": {
+                                                    "type": "string",
+                                                    "example": "Scaner"
+                                                },
+                                                "description": {
+                                                    "type": "string",
+                                                    "example": "Some description"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            }
+        },
+        "/api/accessories/{category}": {
+            "get": {
+                "tags": [
+                    "Category"
+                ],
+                "summary": "Individual category",
+                "operationId": "eae46b7eb738caeff9340c5ba9c55c2a",
+                "parameters": [
+                    {
+                        "name": "accessory",
+                        "in": "path",
+                        "description": "ID of category",
+                        "required": true,
+                        "example": 1
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "name": {
+                                                        "type": "string",
+                                                        "example": "Scaner"
+                                                    },
+                                                    "description": {
+                                                        "type": "string",
+                                                        "example": "Some description"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Category"
+                ],
+                "summary": "Delete category",
+                "operationId": "57de749b2249c8da850effb3f1e95140",
+                "parameters": [
+                    {
+                        "name": "accessory",
+                        "in": "path",
+                        "description": "ID of category",
+                        "required": true,
+                        "example": 1
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Done"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Something went wrong"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Category"
+                ],
+                "summary": "Update category data",
+                "operationId": "253259d52c73b55d0aadd20c9d085642",
+                "parameters": [
+                    {
+                        "name": "accessory",
+                        "in": "path",
+                        "description": "ID of category",
+                        "required": true,
+                        "example": 1
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "name": {
+                                                "type": "string",
+                                                "example": "Scaner"
+                                            },
+                                            "description": {
+                                                "type": "string",
+                                                "example": "Some description"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "name": {
+                                                        "type": "string",
+                                                        "example": "Scaner"
+                                                    },
+                                                    "description": {
+                                                        "type": "string",
+                                                        "example": "Some description"
                                                     }
                                                 },
                                                 "type": "object"
