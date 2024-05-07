@@ -25,7 +25,7 @@ return new class extends Migration
             $table->integer('count')->nullable(0);
 
             $table->foreignId('category_id')->nullable()->index()->constrained('categories');
-            $table->foreignId('manufacturer_id')->nullable()->index()->constrained('manufactories');
+            $table->foreignId('manufacturer_id')->nullable()->index()->constrained('manufactures');
 
             $table->timestamps();
         });
