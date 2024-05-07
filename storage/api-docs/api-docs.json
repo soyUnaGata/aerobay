@@ -814,6 +814,440 @@
                 }
             }
         },
+        "/api/drones": {
+            "get": {
+                "tags": [
+                    "Drone"
+                ],
+                "summary": "List of drones",
+                "operationId": "617abf2f48df3a76a2302ab0bef2ad81",
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "title": {
+                                                        "type": "string",
+                                                        "example": "GEPRC DoMain3.6 HD DJI O3 Freestyle Drone FPV PNP"
+                                                    },
+                                                    "description": {
+                                                        "type": "string",
+                                                        "example": "Der GEPRC 3.6DoMain ist die neueste Generation der Freestyle FPV-Drohnen, die von GEPRCs Expertenteam entwickelt wurde. Mit einer umfassenden technologischen Evolution und tiefgreifendem Verständnis für Freestyle Quadcopter ist die 3.6DoMain die Traum-FPV-Drohne, die Du schon immer gesucht hast."
+                                                    },
+                                                    "price": {
+                                                        "type": "number",
+                                                        "format": "float",
+                                                        "example": 619
+                                                    },
+                                                    "discount": {
+                                                        "type": "number",
+                                                        "format": "float",
+                                                        "example": 10
+                                                    },
+                                                    "image_url": {
+                                                        "type": "string",
+                                                        "example": "https://cdnc.meilon.de/img/product/ge/gep-gp106233/gep-gp106233-4d8227_m.jpg"
+                                                    },
+                                                    "count": {
+                                                        "type": "integer",
+                                                        "example": 15
+                                                    },
+                                                    "category_id": {
+                                                        "type": "integer",
+                                                        "example": 5
+                                                    },
+                                                    "manufacturer_id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Drone"
+                ],
+                "summary": "Create new drone",
+                "operationId": "5234feaa2192edeaa2e3a6f2589105e7",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "title": {
+                                                "type": "string",
+                                                "example": "GEPRC DoMain3.6 HD DJI O3 Freestyle Drone FPV PNP"
+                                            },
+                                            "description": {
+                                                "type": "string",
+                                                "example": "Der GEPRC 3.6DoMain ist die neueste Generation der Freestyle FPV-Drohnen, die von GEPRCs Expertenteam entwickelt wurde. Mit einer umfassenden technologischen Evolution und tiefgreifendem Verständnis für Freestyle Quadcopter ist die 3.6DoMain die Traum-FPV-Drohne, die Du schon immer gesucht hast."
+                                            },
+                                            "price": {
+                                                "type": "number",
+                                                "format": "float",
+                                                "example": 619
+                                            },
+                                            "discount": {
+                                                "type": "number",
+                                                "format": "float",
+                                                "example": 10
+                                            },
+                                            "image_url": {
+                                                "type": "string",
+                                                "example": "https://cdnc.meilon.de/img/product/ge/gep-gp106233/gep-gp106233-4d8227_m.jpg"
+                                            },
+                                            "count": {
+                                                "type": "integer",
+                                                "example": 15
+                                            },
+                                            "category_id": {
+                                                "type": "integer",
+                                                "example": 5
+                                            },
+                                            "manufacturer_id": {
+                                                "type": "integer",
+                                                "example": 1
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Drone added successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "title": {
+                                                    "type": "string",
+                                                    "example": "GEPRC DoMain3.6 HD DJI O3 Freestyle Drone FPV PNP"
+                                                },
+                                                "description": {
+                                                    "type": "string",
+                                                    "example": "Der GEPRC 3.6DoMain ist die neueste Generation der Freestyle FPV-Drohnen, die von GEPRCs Expertenteam entwickelt wurde. Mit einer umfassenden technologischen Evolution und tiefgreifendem Verständnis für Freestyle Quadcopter ist die 3.6DoMain die Traum-FPV-Drohne, die Du schon immer gesucht hast."
+                                                },
+                                                "price": {
+                                                    "type": "number",
+                                                    "format": "float",
+                                                    "example": 619
+                                                },
+                                                "discount": {
+                                                    "type": "number",
+                                                    "format": "float",
+                                                    "example": 10
+                                                },
+                                                "image_url": {
+                                                    "type": "string",
+                                                    "example": "https://cdnc.meilon.de/img/product/ge/gep-gp106233/gep-gp106233-4d8227_m.jpg"
+                                                },
+                                                "count": {
+                                                    "type": "integer",
+                                                    "example": 15
+                                                },
+                                                "category_id": {
+                                                    "type": "integer",
+                                                    "example": 5
+                                                },
+                                                "manufacturer_id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            }
+        },
+        "/api/drones/{drone}": {
+            "get": {
+                "tags": [
+                    "Drone"
+                ],
+                "summary": "Individual drone",
+                "operationId": "a980fec85eaea01ab677f0be9d87e699",
+                "parameters": [
+                    {
+                        "name": "drone",
+                        "in": "path",
+                        "description": "ID of drone",
+                        "required": true,
+                        "example": 1
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "title": {
+                                                        "type": "string",
+                                                        "example": "GEPRC DoMain3.6 HD DJI O3 Freestyle Drone FPV PNP"
+                                                    },
+                                                    "description": {
+                                                        "type": "string",
+                                                        "example": "Der GEPRC 3.6DoMain ist die neueste Generation der Freestyle FPV-Drohnen, die von GEPRCs Expertenteam entwickelt wurde. Mit einer umfassenden technologischen Evolution und tiefgreifendem Verständnis für Freestyle Quadcopter ist die 3.6DoMain die Traum-FPV-Drohne, die Du schon immer gesucht hast."
+                                                    },
+                                                    "price": {
+                                                        "type": "number",
+                                                        "format": "float",
+                                                        "example": 619
+                                                    },
+                                                    "discount": {
+                                                        "type": "number",
+                                                        "format": "float",
+                                                        "example": 10
+                                                    },
+                                                    "image_url": {
+                                                        "type": "string",
+                                                        "example": "https://cdnc.meilon.de/img/product/ge/gep-gp106233/gep-gp106233-4d8227_m.jpg"
+                                                    },
+                                                    "count": {
+                                                        "type": "integer",
+                                                        "example": 15
+                                                    },
+                                                    "category_id": {
+                                                        "type": "integer",
+                                                        "example": 5
+                                                    },
+                                                    "manufacturer_id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Drone"
+                ],
+                "summary": "Delete drone",
+                "operationId": "1061c2685f63b4226a104d1807380044",
+                "parameters": [
+                    {
+                        "name": "drone",
+                        "in": "path",
+                        "description": "ID of drone",
+                        "required": true,
+                        "example": 1
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Done"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Something went wrong"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Drone"
+                ],
+                "summary": "Update drone data",
+                "operationId": "7452ab95cb2f55e5ea3a71689f5b1b3a",
+                "parameters": [
+                    {
+                        "name": "drone",
+                        "in": "path",
+                        "description": "ID of drone",
+                        "required": true,
+                        "example": 1
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "title": {
+                                                "type": "string",
+                                                "example": "GEPRC DoMain3.6 HD DJI O3 Freestyle Drone FPV PNP"
+                                            },
+                                            "description": {
+                                                "type": "string",
+                                                "example": "Der GEPRC 3.6DoMain ist die neueste Generation der Freestyle FPV-Drohnen, die von GEPRCs Expertenteam entwickelt wurde. Mit einer umfassenden technologischen Evolution und tiefgreifendem Verständnis für Freestyle Quadcopter ist die 3.6DoMain die Traum-FPV-Drohne, die Du schon immer gesucht hast."
+                                            },
+                                            "price": {
+                                                "type": "number",
+                                                "format": "float",
+                                                "example": 619
+                                            },
+                                            "discount": {
+                                                "type": "number",
+                                                "format": "float",
+                                                "example": 10
+                                            },
+                                            "image_url": {
+                                                "type": "string",
+                                                "example": "https://cdnc.meilon.de/img/product/ge/gep-gp106233/gep-gp106233-4d8227_m.jpg"
+                                            },
+                                            "count": {
+                                                "type": "integer",
+                                                "example": 15
+                                            },
+                                            "category_id": {
+                                                "type": "integer",
+                                                "example": 5
+                                            },
+                                            "manufacturer_id": {
+                                                "type": "integer",
+                                                "example": 1
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "title": {
+                                                        "type": "string",
+                                                        "example": "Analog FPV camera Foxeer"
+                                                    },
+                                                    "description": {
+                                                        "type": "string",
+                                                        "example": "Der GEPRC 3.6DoMain ist die neueste Generation der Freestyle FPV-Drohnen, die von GEPRCs Expertenteam entwickelt wurde. Mit einer umfassenden technologischen Evolution und tiefgreifendem Verständnis für Freestyle Quadcopter ist die 3.6DoMain die Traum-FPV-Drohne, die Du schon immer gesucht hast. edited  and added"
+                                                    },
+                                                    "price": {
+                                                        "type": "number",
+                                                        "format": "float",
+                                                        "example": 619
+                                                    },
+                                                    "discount": {
+                                                        "type": "number",
+                                                        "format": "float",
+                                                        "example": 10
+                                                    },
+                                                    "image_url": {
+                                                        "type": "string",
+                                                        "example": "https://cdnc.meilon.de/img/product/ge/gep-gp106233/gep-gp106233-4d8227_m.jpg"
+                                                    },
+                                                    "count": {
+                                                        "type": "integer",
+                                                        "example": 15
+                                                    },
+                                                    "category_id": {
+                                                        "type": "integer",
+                                                        "example": 5
+                                                    },
+                                                    "manufacturer_id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            }
+        },
         "/api/manufactory": {
             "get": {
                 "tags": [

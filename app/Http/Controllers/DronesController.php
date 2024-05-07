@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\Drones\StoreRequest;
 use App\Http\Requests\Drones\UpdateRequest;
 use App\Http\Resources\Drones\DronesResource;
-use App\Models\Drone;
 use App\Models\Drones;
 
 class DronesController extends Controller

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DronesController;
 use App\Http\Controllers\SubcategoryController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -14,3 +15,5 @@ Route::apiResource('categories', CategoryController::class);
 Route::apiResource('manufactory', ManufactoryController::class);
 
 Route::apiResource('subcategory', SubcategoryController::class);
+
+Route::apiResource('drones', DronesController::class);
