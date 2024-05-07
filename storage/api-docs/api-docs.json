@@ -1067,6 +1067,284 @@
                     }
                 }
             }
+        },
+        "/api/subcategory": {
+            "get": {
+                "tags": [
+                    "Subcategory|Filter"
+                ],
+                "summary": "List of subcategories (filters)",
+                "operationId": "ad0a469a80e997ed12975f87408658b6",
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "name": {
+                                                        "type": "string",
+                                                        "example": "HD Camera Accessory Type"
+                                                    },
+                                                    "value": {
+                                                        "type": "string",
+                                                        "example": "MicroSD Cards"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Subcategory|Filter"
+                ],
+                "summary": "Add new subcategory (filter)",
+                "operationId": "4fe9c729f00dddb48d0e19681e505969",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "name": {
+                                                "type": "string",
+                                                "example": "HD Camera Accessory Type"
+                                            },
+                                            "value": {
+                                                "type": "string",
+                                                "example": "MicroSD Cards"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Subcategory (filter) added successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "name": {
+                                                    "type": "string",
+                                                    "example": "HD Camera Accessory Type"
+                                                },
+                                                "value": {
+                                                    "type": "string",
+                                                    "example": "MicroSD Cards"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            }
+        },
+        "/api/subcategory/{subcategory}": {
+            "get": {
+                "tags": [
+                    "Subcategory|Filter"
+                ],
+                "summary": "Individual subcategory (filter)",
+                "operationId": "dd02ca8fde09c75d6cdc6581e5915aa2",
+                "parameters": [
+                    {
+                        "name": "subcategory",
+                        "in": "path",
+                        "description": "ID of subcategory",
+                        "required": true,
+                        "example": 1
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "name": {
+                                                        "type": "string",
+                                                        "example": "HD Camera Accessory Type"
+                                                    },
+                                                    "value": {
+                                                        "type": "string",
+                                                        "example": "MicroSD Cards"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Subcategory|Filter"
+                ],
+                "summary": "Delete subcategory (filter)",
+                "operationId": "b013a6e881d61fc5b4b1829cf8d86a6f",
+                "parameters": [
+                    {
+                        "name": "subcategory",
+                        "in": "path",
+                        "description": "ID of subcategory",
+                        "required": true,
+                        "example": 1
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Done"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Something went wrong"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Subcategory|Filter"
+                ],
+                "summary": "Update subcategory (filter) data",
+                "operationId": "e6073d8fa4d50f884c02c76ce18268a3",
+                "parameters": [
+                    {
+                        "name": "subcategory",
+                        "in": "path",
+                        "description": "ID of subcategory",
+                        "required": true,
+                        "example": 1
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "name": {
+                                                "type": "string",
+                                                "example": "HD Camera Accessory Type"
+                                            },
+                                            "value": {
+                                                "type": "string",
+                                                "example": "MicroSD Cards"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "name": {
+                                                        "type": "string",
+                                                        "example": "HD Camera Accessory Type"
+                                                    },
+                                                    "value": {
+                                                        "type": "string",
+                                                        "example": "MicroSD Cards"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            }
         }
     }
 }
