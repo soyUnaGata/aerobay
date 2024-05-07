@@ -646,16 +646,16 @@
                 }
             }
         },
-        "/api/accessories/{category}": {
+        "/api/categories/{category}": {
             "get": {
                 "tags": [
                     "Category"
                 ],
                 "summary": "Individual category",
-                "operationId": "eae46b7eb738caeff9340c5ba9c55c2a",
+                "operationId": "d119cf95b886ef315d9883e0161bc2ee",
                 "parameters": [
                     {
-                        "name": "accessory",
+                        "name": "category",
                         "in": "path",
                         "description": "ID of category",
                         "required": true,
@@ -705,10 +705,10 @@
                     "Category"
                 ],
                 "summary": "Delete category",
-                "operationId": "57de749b2249c8da850effb3f1e95140",
+                "operationId": "aa760339c7ddb217329ab434247bedec",
                 "parameters": [
                     {
-                        "name": "accessory",
+                        "name": "category",
                         "in": "path",
                         "description": "ID of category",
                         "required": true,
@@ -742,10 +742,10 @@
                     "Category"
                 ],
                 "summary": "Update category data",
-                "operationId": "253259d52c73b55d0aadd20c9d085642",
+                "operationId": "0831396eb960e6c920dd5475d2449c6c",
                 "parameters": [
                     {
-                        "name": "accessory",
+                        "name": "category",
                         "in": "path",
                         "description": "ID of category",
                         "required": true,
@@ -797,6 +797,260 @@
                                                     "description": {
                                                         "type": "string",
                                                         "example": "Some description"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            }
+        },
+        "/api/manufactory": {
+            "get": {
+                "tags": [
+                    "Manufactory"
+                ],
+                "summary": "List of manufactories",
+                "operationId": "4c60b748c52214cbbdefe1a89015d2d8",
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "name": {
+                                                        "type": "string",
+                                                        "example": "MODSTER"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Manufactory"
+                ],
+                "summary": "Add new manufactory",
+                "operationId": "02d7d594d42b6f058f0431dddf260ced",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "name": {
+                                                "type": "string",
+                                                "example": "MODSTER"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Category added successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "name": {
+                                                    "type": "string",
+                                                    "example": "MODSTER"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            }
+        },
+        "/api/manufactory/{manufactory}": {
+            "get": {
+                "tags": [
+                    "Manufactory"
+                ],
+                "summary": "Individual manufactory",
+                "operationId": "895e5cfd3587468dd8262eafa0d804da",
+                "parameters": [
+                    {
+                        "name": "manufactory",
+                        "in": "path",
+                        "description": "ID of manufactory",
+                        "required": true,
+                        "example": 1
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "name": {
+                                                        "type": "string",
+                                                        "example": "MODSTER"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Manufactory"
+                ],
+                "summary": "Delete manufactory",
+                "operationId": "6955428f99c9e23c3b7c71d5db76dccc",
+                "parameters": [
+                    {
+                        "name": "manufactory",
+                        "in": "path",
+                        "description": "ID of manufactory",
+                        "required": true,
+                        "example": 1
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Done"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Something went wrong"
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "Manufactory"
+                ],
+                "summary": "Update manufactory data",
+                "operationId": "bfe611c8f2cfd81086caed671b5bff82",
+                "parameters": [
+                    {
+                        "name": "manufactory",
+                        "in": "path",
+                        "description": "ID of manufactory",
+                        "required": true,
+                        "example": 1
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "name": {
+                                                "type": "string",
+                                                "example": "MODSTER"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "name": {
+                                                        "type": "string",
+                                                        "example": "MODSTER"
                                                     }
                                                 },
                                                 "type": "object"

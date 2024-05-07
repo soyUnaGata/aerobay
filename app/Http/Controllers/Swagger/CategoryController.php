@@ -56,13 +56,13 @@ use App\Http\Controllers\Controller;
  *
  * @OA\Get
  *   (
- *        path="/api/accessories/{category}",
+ *        path="/api/categories/{category}",
  *        summary="Individual category",
  *        tags={"Category"},
  *  @OA\Parameter (
  *     description="ID of category",
  *     in="path",
- *     name="accessory",
+ *     name="category",
  *     required=true,
  *     example=1
  *  ),
@@ -83,13 +83,13 @@ use App\Http\Controllers\Controller;
  *
  * @OA\Patch
  *    (
- *         path="/api/accessories/{category}",
+ *         path="/api/categories/{category}",
  *         summary="Update category data",
  *         tags={"Category"},
  * @OA\Parameter (
  *      description="ID of category",
  *      in="path",
- *      name="accessory",
+ *      name="category",
  *      required=true,
  *      example=1
  *   ),
@@ -120,13 +120,13 @@ use App\Http\Controllers\Controller;
  *
  * @OA\Delete
  *   (
- *        path="/api/accessories/{category}",
+ *        path="/api/categories/{category}",
  *        summary="Delete category",
  *        tags={"Category"},
  * @OA\Parameter (
  *       description="ID of category",
  *       in="path",
- *       name="accessory",
+ *       name="category",
  *       required=true,
  *       example=1
  *    ),
