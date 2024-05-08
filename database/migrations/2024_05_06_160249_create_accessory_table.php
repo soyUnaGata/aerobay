@@ -24,8 +24,8 @@ return new class extends Migration
             $table->string('type')->nullable();
             $table->integer('count')->nullable(0);
 
-            $table->foreignId('category_id')->nullable()->index()->constrained('categories');
-            $table->foreignId('manufacturer_id')->nullable()->index()->constrained('manufactures');
+            $table->foreignId('category_id')->nullable()->index()->constrained('categories')->onDelete('cascade');;
+            $table->foreignId('manufacturer_id')->nullable()->index()->constrained('manufactures')->onDelete('cascade');;
 
             $table->timestamps();
         });
