@@ -17,8 +17,8 @@ class AccessoryController extends Controller
      */
     public function index()
     {
-        $accessories = Accessory::all();
-        return AccessoryResource::collection($accessories);
+        $accessories = Accessory::with('subcategories')->get();
+        return response()->json(['accessories' => $accessories], 200);
     }
 
     /**
@@ -28,8 +28,12 @@ class AccessoryController extends Controller
     {
         $data = $request->validated();
         $accessory = Accessory::create($data);
+        AccessoryResource::make($accessory);
 
-        return AccessoryResource::make($accessory);
+        $subcategories = $data['subcategories'];
+        $accessory->subcategories()->attach($subcategories);
+
+        return $accessory;
     }
 
     /**
@@ -48,8 +52,11 @@ class AccessoryController extends Controller
         $data = $request->validated();
         $accessory->update($data);
 
-//        $accessory = $accessory->fresh();
-        return AccessoryResource::make($accessory);
+        $subcategories = $data['subcategories'];
+        $accessory->subcategories()->detach();
+        $accessory->subcategories()->attach($subcategories);
+
+        return $accessory;
     }
 
     /**

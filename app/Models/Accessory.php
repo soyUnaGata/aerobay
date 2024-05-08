@@ -5,11 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use  Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use App\Models\Manufactory;
 
 class Accessory extends Model
 {
     use HasFactory;
     protected $guarded = false;
+    protected $hidden = ['pivot'];
 
     protected $fillable = [
         'title',
@@ -23,11 +26,12 @@ class Accessory extends Model
         'type',
         'count',
         'category_id',
-        'manufacturer_id'
+        'manufacturer_id',
+        'subcategories'
     ];
 
-    public function category(): BelongsTo
+    public function subcategories() : BelongsToMany
     {
-        return $this->belongsTo(Category::class, 'category_id', 'id');
+        return $this->belongsToMany(Subcategory::class);
     }
 }
