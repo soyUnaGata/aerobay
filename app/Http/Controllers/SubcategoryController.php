@@ -13,8 +13,9 @@ class SubcategoryController extends Controller
 {
     public function index()
     {
-        $categories = Subcategory::all();
-        return SubcategoryResource::collection($categories);
+        $subcategories = Subcategory::with('category')->get();
+
+        return response()->json($subcategories);
     }
 
 
@@ -24,36 +25,35 @@ class SubcategoryController extends Controller
     public function store(StoreRequest $request)
     {
         $data = $request->validated();
-        $category = Subcategory::create($data);
-
-        return SubcategoryResource::make($category);
+        $subcategory = Subcategory::create($data);
+        return SubcategoryResource::make($subcategory);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Subcategory $category)
+    public function show(Subcategory $subcategory)
     {
-        return SubcategoryResource::make($category);
+        return SubcategoryResource::make($subcategory);
     }
 
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateRequest $request, Subcategory $category)
+    public function update(UpdateRequest $request, Subcategory $subcategory)
     {
         $data = $request->validated();
-        $category->update($data);
-        return SubcategoryResource::make($category);
+        $subcategory->update($data);
+        return SubcategoryResource::make($subcategory);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Subcategory $category)
+    public function destroy(Subcategory $subcategories)
     {
-        $category->delete();
+        $subcategories->delete();
         return response()->json(['message' => 'done'], 204);
     }
 }
