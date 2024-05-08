@@ -32,8 +32,9 @@ class StoreRequest extends FormRequest
             'color'=> 'nullable|string',
             'type'=> 'nullable|string',
             'count'=> 'nullable|integer',
-            'category_id' => 'integer',
-            'manufacturer_id' => 'integer',
+            'category_id' => 'integer|nullable',
+            'manufacturer_id' => 'integer|nullable',
+            'subcategories' => 'array'
         ];
     }
 }
