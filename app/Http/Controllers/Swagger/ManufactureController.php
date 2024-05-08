@@ -7,9 +7,9 @@ use App\Http\Controllers\Controller;
 /**
  * @OA\Post
  * (
- *      path="/api/manufactory",
- *      summary="Add new manufactory",
- *      tags={"Manufactory"},
+ *      path="/api/manufactures",
+ *      summary="Add new manufacture",
+ *      tags={"Manufacture"},
  *      @OA\RequestBody(
  *          @OA\JsonContent(
  *              allOf={
@@ -21,7 +21,7 @@ use App\Http\Controllers\Controller;
  *      ),
  *      @OA\Response(
  *          response="201",
- *          description="Category added successfully",
+ *          description="Manufacture added successfully",
  *          @OA\JsonContent(
  *              @OA\Property(property="data", type="object",
  *                  @OA\Property(property="id", type="integer", example=1),
@@ -34,9 +34,9 @@ use App\Http\Controllers\Controller;
  *
  * @OA\Get
  *  (
- *       path="/api/manufactory",
- *       summary="List of manufactories",
- *       tags={"Manufactory"},
+ *       path="/api/manufactures",
+ *       summary="List of manufactures",
+ *       tags={"Manufacture"},
  * @OA\Response(
  *           response="201",
  *           description="Ok",
@@ -53,13 +53,13 @@ use App\Http\Controllers\Controller;
  *
  * @OA\Get
  *   (
- *        path="/api/manufactory/{manufactory}",
- *        summary="Individual manufactory",
- *        tags={"Manufactory"},
+ *        path="/api/manufactures/{manufacture}",
+ *        summary="Individual manufacture",
+ *        tags={"Manufacture"},
  *  @OA\Parameter (
- *     description="ID of manufactory",
+ *     description="ID of manufacture",
  *     in="path",
- *     name="manufactory",
+ *     name="manufacture",
  *     required=true,
  *     example=1
  *  ),
@@ -79,13 +79,13 @@ use App\Http\Controllers\Controller;
  *
  * @OA\Put
  *    (
- *         path="/api/manufactory/{manufactory}",
- *         summary="Update manufactory data",
- *         tags={"Manufactory"},
+ *         path="/api/manufactures/{manufacture}",
+ *         summary="Update manufacture data",
+ *         tags={"Manufacture"},
  * @OA\Parameter (
- *      description="ID of manufactory",
+ *      description="ID of manufacture",
  *      in="path",
- *      name="manufactory",
+ *      name="manufacture",
  *      required=true,
  *      example=1
  *   ),
@@ -114,13 +114,13 @@ use App\Http\Controllers\Controller;
  *
  * @OA\Delete
  *   (
- *        path="/api/manufactory/{manufactory}",
- *        summary="Delete manufactory",
- *        tags={"Manufactory"},
+ *        path="/api/manufactures/{manufacture}",
+ *        summary="Delete manufacture",
+ *        tags={"Manufacture"},
  * @OA\Parameter (
- *       description="ID of manufactory",
+ *       description="ID of manufacture",
  *       in="path",
- *       name="manufactory",
+ *       name="manufacture",
  *       required=true,
  *       example=1
  *    ),
@@ -134,7 +134,7 @@ use App\Http\Controllers\Controller;
  * @OA\Response(response="422", description="Something went wrong")
  *    ),
  */
-class ManufactoryController extends Controller
+class ManufactureController extends Controller
 {
 
 }
