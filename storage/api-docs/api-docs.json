@@ -338,49 +338,12 @@
                     }
                 }
             },
-            "delete": {
-                "tags": [
-                    "Accessory"
-                ],
-                "summary": "Delete accessory",
-                "operationId": "00e51652ef89240ba26e3ee48fec219e",
-                "parameters": [
-                    {
-                        "name": "accessory",
-                        "in": "path",
-                        "description": "ID of accessory",
-                        "required": true,
-                        "example": 1
-                    }
-                ],
-                "responses": {
-                    "201": {
-                        "description": "Ok",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "properties": {
-                                        "message": {
-                                            "type": "string",
-                                            "example": "Done"
-                                        }
-                                    },
-                                    "type": "object"
-                                }
-                            }
-                        }
-                    },
-                    "422": {
-                        "description": "Something went wrong"
-                    }
-                }
-            },
-            "patch": {
+            "put": {
                 "tags": [
                     "Accessory"
                 ],
                 "summary": "Update accessory data",
-                "operationId": "8a4fd9d51d010276382cbdd03f3def93",
+                "operationId": "0a90ac2ac1893a94258dc75b4e982b2e",
                 "parameters": [
                     {
                         "name": "accessory",
@@ -532,6 +495,43 @@
                     },
                     "422": {
                         "description": "Validation errors"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Accessory"
+                ],
+                "summary": "Delete accessory",
+                "operationId": "00e51652ef89240ba26e3ee48fec219e",
+                "parameters": [
+                    {
+                        "name": "accessory",
+                        "in": "path",
+                        "description": "ID of accessory",
+                        "required": true,
+                        "example": 1
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Done"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Something went wrong"
                     }
                 }
             }
@@ -700,49 +700,12 @@
                     }
                 }
             },
-            "delete": {
-                "tags": [
-                    "Category"
-                ],
-                "summary": "Delete category",
-                "operationId": "aa760339c7ddb217329ab434247bedec",
-                "parameters": [
-                    {
-                        "name": "category",
-                        "in": "path",
-                        "description": "ID of category",
-                        "required": true,
-                        "example": 1
-                    }
-                ],
-                "responses": {
-                    "201": {
-                        "description": "Ok",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "properties": {
-                                        "message": {
-                                            "type": "string",
-                                            "example": "Done"
-                                        }
-                                    },
-                                    "type": "object"
-                                }
-                            }
-                        }
-                    },
-                    "422": {
-                        "description": "Something went wrong"
-                    }
-                }
-            },
-            "patch": {
+            "put": {
                 "tags": [
                     "Category"
                 ],
                 "summary": "Update category data",
-                "operationId": "0831396eb960e6c920dd5475d2449c6c",
+                "operationId": "b32862b5571abe03cf0b1fced59832cf",
                 "parameters": [
                     {
                         "name": "category",
@@ -810,6 +773,43 @@
                     },
                     "422": {
                         "description": "Validation errors"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Category"
+                ],
+                "summary": "Delete category",
+                "operationId": "aa760339c7ddb217329ab434247bedec",
+                "parameters": [
+                    {
+                        "name": "category",
+                        "in": "path",
+                        "description": "ID of category",
+                        "required": true,
+                        "example": 1
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Done"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Something went wrong"
                     }
                 }
             }
@@ -1082,49 +1082,12 @@
                     }
                 }
             },
-            "delete": {
-                "tags": [
-                    "Drone"
-                ],
-                "summary": "Delete drone",
-                "operationId": "1061c2685f63b4226a104d1807380044",
-                "parameters": [
-                    {
-                        "name": "drone",
-                        "in": "path",
-                        "description": "ID of drone",
-                        "required": true,
-                        "example": 1
-                    }
-                ],
-                "responses": {
-                    "201": {
-                        "description": "Ok",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "properties": {
-                                        "message": {
-                                            "type": "string",
-                                            "example": "Done"
-                                        }
-                                    },
-                                    "type": "object"
-                                }
-                            }
-                        }
-                    },
-                    "422": {
-                        "description": "Something went wrong"
-                    }
-                }
-            },
-            "patch": {
+            "put": {
                 "tags": [
                     "Drone"
                 ],
                 "summary": "Update drone data",
-                "operationId": "7452ab95cb2f55e5ea3a71689f5b1b3a",
+                "operationId": "845a4fa7331408e91c5068b71b51f277",
                 "parameters": [
                     {
                         "name": "drone",
@@ -1244,6 +1207,43 @@
                     },
                     "422": {
                         "description": "Validation errors"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Drone"
+                ],
+                "summary": "Delete drone",
+                "operationId": "1061c2685f63b4226a104d1807380044",
+                "parameters": [
+                    {
+                        "name": "drone",
+                        "in": "path",
+                        "description": "ID of drone",
+                        "required": true,
+                        "example": 1
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Done"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Something went wrong"
                     }
                 }
             }
@@ -1396,49 +1396,12 @@
                     }
                 }
             },
-            "delete": {
-                "tags": [
-                    "Manufactory"
-                ],
-                "summary": "Delete manufactory",
-                "operationId": "6955428f99c9e23c3b7c71d5db76dccc",
-                "parameters": [
-                    {
-                        "name": "manufactory",
-                        "in": "path",
-                        "description": "ID of manufactory",
-                        "required": true,
-                        "example": 1
-                    }
-                ],
-                "responses": {
-                    "201": {
-                        "description": "Ok",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "properties": {
-                                        "message": {
-                                            "type": "string",
-                                            "example": "Done"
-                                        }
-                                    },
-                                    "type": "object"
-                                }
-                            }
-                        }
-                    },
-                    "422": {
-                        "description": "Something went wrong"
-                    }
-                }
-            },
-            "patch": {
+            "put": {
                 "tags": [
                     "Manufactory"
                 ],
                 "summary": "Update manufactory data",
-                "operationId": "bfe611c8f2cfd81086caed671b5bff82",
+                "operationId": "bb17dad4b715c0d9227954b58068340f",
                 "parameters": [
                     {
                         "name": "manufactory",
@@ -1498,6 +1461,43 @@
                     },
                     "422": {
                         "description": "Validation errors"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Manufactory"
+                ],
+                "summary": "Delete manufactory",
+                "operationId": "6955428f99c9e23c3b7c71d5db76dccc",
+                "parameters": [
+                    {
+                        "name": "manufactory",
+                        "in": "path",
+                        "description": "ID of manufactory",
+                        "required": true,
+                        "example": 1
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Done"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Something went wrong"
                     }
                 }
             }
@@ -1666,49 +1666,12 @@
                     }
                 }
             },
-            "delete": {
-                "tags": [
-                    "Subcategory|Filter"
-                ],
-                "summary": "Delete subcategory (filter)",
-                "operationId": "b013a6e881d61fc5b4b1829cf8d86a6f",
-                "parameters": [
-                    {
-                        "name": "subcategory",
-                        "in": "path",
-                        "description": "ID of subcategory",
-                        "required": true,
-                        "example": 1
-                    }
-                ],
-                "responses": {
-                    "201": {
-                        "description": "Ok",
-                        "content": {
-                            "application/json": {
-                                "schema": {
-                                    "properties": {
-                                        "message": {
-                                            "type": "string",
-                                            "example": "Done"
-                                        }
-                                    },
-                                    "type": "object"
-                                }
-                            }
-                        }
-                    },
-                    "422": {
-                        "description": "Something went wrong"
-                    }
-                }
-            },
-            "patch": {
+            "put": {
                 "tags": [
                     "Subcategory|Filter"
                 ],
                 "summary": "Update subcategory (filter) data",
-                "operationId": "e6073d8fa4d50f884c02c76ce18268a3",
+                "operationId": "808f78bbe53793d5e3c34382cd55aee3",
                 "parameters": [
                     {
                         "name": "subcategory",
@@ -1776,6 +1739,43 @@
                     },
                     "422": {
                         "description": "Validation errors"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Subcategory|Filter"
+                ],
+                "summary": "Delete subcategory (filter)",
+                "operationId": "b013a6e881d61fc5b4b1829cf8d86a6f",
+                "parameters": [
+                    {
+                        "name": "subcategory",
+                        "in": "path",
+                        "description": "ID of subcategory",
+                        "required": true,
+                        "example": 1
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Done"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Something went wrong"
                     }
                 }
             }

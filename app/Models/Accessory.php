@@ -26,8 +26,7 @@ class Accessory extends Model
         'type',
         'count',
         'category_id',
-        'manufacturer_id',
-        'subcategories'
+        'manufacturer_id'
     ];
 
     public function subcategories() : BelongsToMany

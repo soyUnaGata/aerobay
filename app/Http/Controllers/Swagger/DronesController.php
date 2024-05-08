@@ -105,7 +105,7 @@ use App\Http\Controllers\Controller;
  * @OA\Response(response="422", description="Validation errors")
  *    ),
  *
- * @OA\Patch
+ * @OA\Put
  *    (
  *         path="/api/drones/{drone}",
  *         summary="Update drone data",
