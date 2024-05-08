@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Manufactory;
+use App\Models\Manufacture;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\Manufactory\StoreRequest;
 use App\Http\Requests\Manufactory\UpdateRequest;
 use App\Http\Resources\Manufactory\ManufactoryResource;
 
-class ManufactoryController extends Controller
+class ManufactureController extends Controller
 {
     public function index()
     {
-        $categories = Manufactory::all();
-        return ManufactoryResource::collection($categories);
+        $manufactures = Manufacture::all();
+        return ManufactoryResource::collection($manufactures);
     }
 
 
@@ -24,36 +24,36 @@ class ManufactoryController extends Controller
     public function store(StoreRequest $request)
     {
         $data = $request->validated();
-        $category = Manufactory::create($data);
+        $manufacture = Manufacture::create($data);
 
-        return ManufactoryResource::make($category);
+        return ManufactoryResource::make($manufacture);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Manufactory $category)
+    public function show(Manufacture $manufacture)
     {
-        return ManufactoryResource::make($category);
+        return ManufactoryResource::make($manufacture);
     }
 
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateRequest $request, Manufactory $category)
+    public function update(UpdateRequest $request, Manufacture $manufacture)
     {
         $data = $request->validated();
-        $category->update($data);
-        return ManufactoryResource::make($category);
+        $manufacture->update($data);
+        return ManufactoryResource::make($manufacture);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Manufactory $category)
+    public function destroy(Manufacture $manufacture)
     {
-        $category->delete();
+        $manufacture->delete();
         return response()->json(['message' => 'done'], 204);
     }
 }

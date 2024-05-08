@@ -1248,13 +1248,13 @@
                 }
             }
         },
-        "/api/manufactory": {
+        "/api/manufactures": {
             "get": {
                 "tags": [
-                    "Manufactory"
+                    "Manufacture"
                 ],
-                "summary": "List of manufactories",
-                "operationId": "4c60b748c52214cbbdefe1a89015d2d8",
+                "summary": "List of manufactures",
+                "operationId": "3752d6f33390de3d1ca11db483e1198e",
                 "responses": {
                     "201": {
                         "description": "Ok",
@@ -1291,10 +1291,10 @@
             },
             "post": {
                 "tags": [
-                    "Manufactory"
+                    "Manufacture"
                 ],
-                "summary": "Add new manufactory",
-                "operationId": "02d7d594d42b6f058f0431dddf260ced",
+                "summary": "Add new manufacture",
+                "operationId": "768241a635609346f58fd9956757c9be",
                 "requestBody": {
                     "content": {
                         "application/json": {
@@ -1316,7 +1316,7 @@
                 },
                 "responses": {
                     "201": {
-                        "description": "Category added successfully",
+                        "description": "Manufacture added successfully",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -1346,18 +1346,18 @@
                 }
             }
         },
-        "/api/manufactory/{manufactory}": {
+        "/api/manufactures/{manufacture}": {
             "get": {
                 "tags": [
-                    "Manufactory"
+                    "Manufacture"
                 ],
-                "summary": "Individual manufactory",
-                "operationId": "895e5cfd3587468dd8262eafa0d804da",
+                "summary": "Individual manufacture",
+                "operationId": "811189691d12dad0598844b5191f4eb8",
                 "parameters": [
                     {
-                        "name": "manufactory",
+                        "name": "manufacture",
                         "in": "path",
-                        "description": "ID of manufactory",
+                        "description": "ID of manufacture",
                         "required": true,
                         "example": 1
                     }
@@ -1398,15 +1398,15 @@
             },
             "put": {
                 "tags": [
-                    "Manufactory"
+                    "Manufacture"
                 ],
-                "summary": "Update manufactory data",
-                "operationId": "bb17dad4b715c0d9227954b58068340f",
+                "summary": "Update manufacture data",
+                "operationId": "62ad81d8023a4dcc9627225f00604996",
                 "parameters": [
                     {
-                        "name": "manufactory",
+                        "name": "manufacture",
                         "in": "path",
-                        "description": "ID of manufactory",
+                        "description": "ID of manufacture",
                         "required": true,
                         "example": 1
                     }
@@ -1466,15 +1466,15 @@
             },
             "delete": {
                 "tags": [
-                    "Manufactory"
+                    "Manufacture"
                 ],
-                "summary": "Delete manufactory",
-                "operationId": "6955428f99c9e23c3b7c71d5db76dccc",
+                "summary": "Delete manufacture",
+                "operationId": "dec2e2ebe6cf0a56714dcde2ee9c22b3",
                 "parameters": [
                     {
-                        "name": "manufactory",
+                        "name": "manufacture",
                         "in": "path",
-                        "description": "ID of manufactory",
+                        "description": "ID of manufacture",
                         "required": true,
                         "example": 1
                     }
