@@ -17,8 +17,8 @@ class Drones extends Model
         'price',
         'discount',
         'image_url',
-        'count',
-        'category_id',
+        'amount',
+        'class_id',
         'manufacturer_id'
     ];
 }

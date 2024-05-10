@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -18,9 +17,9 @@ return new class extends Migration
             $table->float('price');
             $table->decimal('discount')->default(0.0);
             $table->string('image_url')->nullable();
-            $table->integer('count')->nullable(0);
+            $table->integer('amount')->nullable(0);
 
-            $table->foreignId('category_id')->nullable()->index()->constrained('categories');
+            $table->foreignId('class_id')->nullable()->index()->constrained('classes');
             $table->foreignId('manufacturer_id')->nullable()->index()->constrained('manufactures');
             $table->timestamps();
         });

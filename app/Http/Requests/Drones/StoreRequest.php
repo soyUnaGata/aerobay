@@ -27,8 +27,8 @@ class StoreRequest extends FormRequest
             'price' => 'required|numeric',
             'discount' => 'nullable|numeric',
             'image_url' => 'nullable|url',
-            'count'=> 'nullable|integer',
-            'category_id' => 'integer',
+            'amount' => 'nullable|integer',
+            'class_id' => 'integer',
             'manufacturer_id' => 'integer',
         ];
     }
