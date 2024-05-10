@@ -11,8 +11,8 @@ class DronesController extends Controller
 {
     public function index()
     {
-        $categories = Drones::all();
-        return DronesResource::collection($categories);
+        $drones = Drones::all();
+        return DronesResource::collection($drones);
     }
 
 
@@ -22,36 +22,36 @@ class DronesController extends Controller
     public function store(StoreRequest $request)
     {
         $data = $request->validated();
-        $category = Drones::create($data);
+        $drone = Drones::create($data);
 
-        return DronesResource::make($category);
+        return DronesResource::make($drone);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Drones $category)
+    public function show(Drones $drone)
     {
-        return DronesResource::make($category);
+        return DronesResource::make($drone);
     }
 
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateRequest $request, Drones $category)
+    public function update(UpdateRequest $request, Drones $drone)
     {
         $data = $request->validated();
-        $category->update($data);
-        return DronesResource::make($category);
+        $drone->update($data);
+        return DronesResource::make($drone);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Drones $category)
+    public function destroy(Drones $drone)
     {
-        $category->delete();
+        $drone->delete();
         return response()->json(['message' => 'done'], 204);
     }
 }
