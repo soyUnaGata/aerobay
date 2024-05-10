@@ -10,7 +10,7 @@ use App\Http\Controllers\Controller;
  *      path="/api/drones",
  *      summary="Create new drone",
  *      tags={"Drone"},
- *      @OA\RequestBody(
+ * @OA\RequestBody(
  *          @OA\JsonContent(
  *              allOf={
  *                  @OA\Schema(
@@ -19,14 +19,14 @@ use App\Http\Controllers\Controller;
  *                      @OA\Property(property="price", type="float", example=619),
  *                      @OA\Property(property="discount", type="float", example=10),
  *                      @OA\Property(property="image_url", type="string", example="https://cdnc.meilon.de/img/product/ge/gep-gp106233/gep-gp106233-4d8227_m.jpg"),
- *                      @OA\Property(property="count", type="integer", example=15),
- *                      @OA\Property(property="category_id", type="integer", example=5),
+ *                      @OA\Property(property="amount", type="integer", example=15),
+ *                      @OA\Property(property="class_id", type="integer", example=5),
  *                      @OA\Property(property="manufacturer_id", type="integer", example=1),
  *                  )
  *              }
  *          )
  *      ),
- *      @OA\Response(
+ * @OA\Response(
  *          response="201",
  *          description="Drone added successfully",
  *          @OA\JsonContent(
@@ -37,13 +37,13 @@ use App\Http\Controllers\Controller;
  *                  @OA\Property(property="price", type="float", example=619),
  *                  @OA\Property(property="discount", type="float", example=10),
  *                  @OA\Property(property="image_url", type="string", example="https://cdnc.meilon.de/img/product/ge/gep-gp106233/gep-gp106233-4d8227_m.jpg"),
- *                  @OA\Property(property="count", type="integer", example=15),
- *                  @OA\Property(property="category_id", type="integer", example=5),
+ *                  @OA\Property(property="amount", type="integer", example=15),
+ *                  @OA\Property(property="class_id", type="integer", example=5),
  *                  @OA\Property(property="manufacturer_id", type="integer", example=1),
  *              )
  *          )
  *      ),
- *      @OA\Response(response="422", description="Validation errors")
+ * @OA\Response(response="422", description="Validation errors")
  *  ),
  *
  * @OA\Get
@@ -62,8 +62,8 @@ use App\Http\Controllers\Controller;
  *                   @OA\Property(property="price", type="float", example=619),
  *                   @OA\Property(property="discount", type="float", example=10),
  *                   @OA\Property(property="image_url", type="string", example="https://cdnc.meilon.de/img/product/ge/gep-gp106233/gep-gp106233-4d8227_m.jpg"),
- *                   @OA\Property(property="count", type="integer", example=15),
- *                   @OA\Property(property="category_id", type="integer", example=5),
+ *                   @OA\Property(property="amount", type="integer", example=15),
+ *                   @OA\Property(property="class_id", type="integer", example=5),
  *                   @OA\Property(property="manufacturer_id", type="integer", example=1),
  *               )
  *              )
@@ -77,14 +77,14 @@ use App\Http\Controllers\Controller;
  *        path="/api/drones/{drone}",
  *        summary="Individual drone",
  *        tags={"Drone"},
- *  @OA\Parameter (
+ * @OA\Parameter (
  *     description="ID of drone",
  *     in="path",
  *     name="drone",
  *     required=true,
  *     example=1
  *  ),
- *  @OA\Response(
+ * @OA\Response(
  *            response="201",
  *            description="Ok",
  *            @OA\JsonContent(
@@ -95,8 +95,8 @@ use App\Http\Controllers\Controller;
  *                    @OA\Property(property="price", type="float", example=619),
  *                    @OA\Property(property="discount", type="float", example=10),
  *                    @OA\Property(property="image_url", type="string", example="https://cdnc.meilon.de/img/product/ge/gep-gp106233/gep-gp106233-4d8227_m.jpg"),
- *                    @OA\Property(property="count", type="integer", example=15),
- *                    @OA\Property(property="category_id", type="integer", example=5),
+ *                    @OA\Property(property="amount", type="integer", example=15),
+ *                    @OA\Property(property="class_id", type="integer", example=5),
  *                    @OA\Property(property="manufacturer_id", type="integer", example=1),
  *                )
  *               )
@@ -117,7 +117,7 @@ use App\Http\Controllers\Controller;
  *      required=true,
  *      example=1
  *   ),
- *      @OA\RequestBody(
+ * @OA\RequestBody(
  *           @OA\JsonContent(
  *               allOf={
  *                   @OA\Schema(
@@ -126,8 +126,8 @@ use App\Http\Controllers\Controller;
  *                       @OA\Property(property="price", type="float", example=619),
  *                       @OA\Property(property="discount", type="float", example=10),
  *                       @OA\Property(property="image_url", type="string", example="https://cdnc.meilon.de/img/product/ge/gep-gp106233/gep-gp106233-4d8227_m.jpg"),
- *                       @OA\Property(property="count", type="integer", example=15),
- *                       @OA\Property(property="category_id", type="integer", example=5),
+ *                       @OA\Property(property="amount", type="integer", example=15),
+ *                       @OA\Property(property="class_id", type="integer", example=5),
  *                       @OA\Property(property="manufacturer_id", type="integer", example=1),
  *                   )
  *               }
@@ -144,8 +144,8 @@ use App\Http\Controllers\Controller;
  *                     @OA\Property(property="price", type="float", example=619),
  *                     @OA\Property(property="discount", type="float", example=10),
  *                     @OA\Property(property="image_url", type="string", example="https://cdnc.meilon.de/img/product/ge/gep-gp106233/gep-gp106233-4d8227_m.jpg"),
- *                     @OA\Property(property="count", type="integer", example=15),
- *                     @OA\Property(property="category_id", type="integer", example=5),
+ *                     @OA\Property(property="amount", type="integer", example=15),
+ *                     @OA\Property(property="class_id", type="integer", example=5),
  *                     @OA\Property(property="manufacturer_id", type="integer", example=1),
  *                 )
  *                )
@@ -176,7 +176,6 @@ use App\Http\Controllers\Controller;
  * @OA\Response(response="422", description="Something went wrong")
  *    ),
  */
-
 class DronesController extends Controller
 {
 
