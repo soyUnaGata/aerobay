@@ -11,6 +11,7 @@ use App\Models\Manufacture;
 class Accessory extends Model
 {
     use HasFactory;
+
     protected $guarded = false;
     protected $hidden = ['pivot'];
 
@@ -24,12 +25,12 @@ class Accessory extends Model
         'weight',
         'color',
         'type',
-        'count',
+        'amount',
         'category_id',
         'manufacturer_id'
     ];
 
-    public function subcategories() : BelongsToMany
+    public function subcategories(): BelongsToMany
     {
         return $this->belongsToMany(Subcategory::class);
     }
