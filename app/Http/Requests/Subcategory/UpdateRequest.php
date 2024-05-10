@@ -24,7 +24,7 @@ class UpdateRequest extends FormRequest
         return [
             'name' => 'string',
             'value' => 'string',
-            'category_id' => 'integer|nullable'
+            'category_id' => 'integer'
         ];
     }
 }
