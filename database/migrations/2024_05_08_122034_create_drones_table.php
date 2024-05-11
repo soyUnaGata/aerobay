@@ -19,7 +19,7 @@ return new class extends Migration {
             $table->string('image_url')->nullable();
             $table->integer('amount')->nullable(0);
 
-            $table->foreignId('class_id')->nullable()->index()->constrained('classes');
+            $table->foreignId('group_id')->nullable()->index()->constrained('groups');
             $table->foreignId('manufacturer_id')->nullable()->index()->constrained('manufactures');
             $table->timestamps();
         });
