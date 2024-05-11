@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\Drones\StoreRequest;
-use App\Http\Requests\Drones\UpdateRequest;
-use App\Http\Resources\Drones\DronesResource;
-use App\Models\Drones;
+use App\Http\Requests\Drone\StoreRequest;
+use App\Http\Requests\Drone\UpdateRequest;
+use App\Http\Resources\Drone\DroneResource;
+use App\Models\Drone;
 
-class DronesController extends Controller
+class DroneController extends Controller
 {
     public function index()
     {
-        $drones = Drones::all();
-        return DronesResource::collection($drones);
+        $drones = Drone::all();
+        return DroneResource::collection($drones);
     }
 
 
@@ -22,34 +22,34 @@ class DronesController extends Controller
     public function store(StoreRequest $request)
     {
         $data = $request->validated();
-        $drone = Drones::create($data);
+        $drone = Drone::create($data);
 
-        return DronesResource::make($drone);
+        return DroneResource::make($drone);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Drones $drone)
+    public function show(Drone $drone)
     {
-        return DronesResource::make($drone);
+        return DroneResource::make($drone);
     }
 
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateRequest $request, Drones $drone)
+    public function update(UpdateRequest $request, Drone $drone)
     {
         $data = $request->validated();
         $drone->update($data);
-        return DronesResource::make($drone);
+        return DroneResource::make($drone);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Drones $drone)
+    public function destroy(Drone $drone)
     {
         $drone->delete();
         return response()->json(['message' => 'done'], 204);

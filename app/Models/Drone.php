@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Drones extends Model
+class Drone extends Model
 {
     use HasFactory;
 
@@ -18,7 +18,7 @@ class Drones extends Model
         'discount',
         'image_url',
         'amount',
-        'class_id',
+        'group_id',
         'manufacturer_id'
     ];
 }

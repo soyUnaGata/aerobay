@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Drones;
+namespace App\Http\Requests\Drone;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreRequest extends FormRequest
+class UpdateRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -28,7 +28,7 @@ class StoreRequest extends FormRequest
             'discount' => 'nullable|numeric',
             'image_url' => 'nullable|url',
             'amount' => 'nullable|integer',
-            'class_id' => 'integer',
+            'group_id' => 'integer',
             'manufacturer_id' => 'integer',
         ];
     }
