@@ -53,7 +53,7 @@ class AccessoryController extends Controller
         $accessory->update($data);
 
         $subcategories = $data['subcategories'];
-        $accessory->subcategories()->detach();
+        $accessory->subcategories()->detach($subcategories);
         $accessory->subcategories()->attach($subcategories);
 
         return $accessory;
