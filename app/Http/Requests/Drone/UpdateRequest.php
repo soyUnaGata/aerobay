@@ -30,6 +30,7 @@ class UpdateRequest extends FormRequest
             'amount' => 'nullable|integer',
             'group_id' => 'integer',
             'manufacturer_id' => 'integer',
+            'subcategories' => 'array'
         ];
     }
 }

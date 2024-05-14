@@ -11,8 +11,8 @@ class DroneController extends Controller
 {
     public function index()
     {
-        $drones = Drone::all();
-        return DroneResource::collection($drones);
+        $drones = Drone::with('subcategories')->get();
+        return response()->json(['drones' => $drones], 200);
     }
 
 
@@ -23,8 +23,12 @@ class DroneController extends Controller
     {
         $data = $request->validated();
         $drone = Drone::create($data);
+        DroneResource::make($drone);
 
-        return DroneResource::make($drone);
+        $subcategories = $data['subcategories'];
+        $drone->subcategories()->attach($subcategories);
+
+        return $drone;
     }
 
     /**
@@ -43,7 +47,12 @@ class DroneController extends Controller
     {
         $data = $request->validated();
         $drone->update($data);
-        return DroneResource::make($drone);
+
+        $subcategories = $data['subcategories'];
+        $drone->subcategories()->detach($subcategories);
+        $drone->subcategories()->attach($subcategories);
+
+        return $drone;
     }
 
     /**

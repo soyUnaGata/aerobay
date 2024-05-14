@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class Subcategory extends Model
 {
     use HasFactory;
+
     protected $guarded = false;
     protected $hidden = ['pivot'];
     protected $fillable = [
@@ -18,13 +19,18 @@ class Subcategory extends Model
         'category_id',
     ];
 
-    public function accessories() : BelongsToMany
+    public function accessories(): BelongsToMany
     {
         return $this->belongsToMany(Accessory::class);
     }
 
-    public function category() : BelongsTo
+    public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
+    }
+
+    public function group(): BelongsTo
+    {
+        return $this->belongsTo(Group::class);
     }
 }
