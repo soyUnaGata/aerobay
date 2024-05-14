@@ -17,7 +17,8 @@ class AccessoryController extends Controller
      */
     public function index()
     {
-        return response()->json("OKAY", 200);
+        $accessories = Accessory::with('subcategories')->get();
+        return response()->json(['accessories' => $accessories], 200);
     }
 
     /**
