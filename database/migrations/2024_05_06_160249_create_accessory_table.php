@@ -13,7 +13,7 @@ return new class extends Migration {
         Schema::create('accessories', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('description');
+            $table->string('description', 1000);
             $table->float('price');
             $table->decimal('discount')->default(0.0);
             $table->string('image_url')->nullable();

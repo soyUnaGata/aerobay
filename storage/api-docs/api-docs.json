@@ -77,6 +77,14 @@
                                                     "manufacturer_id": {
                                                         "type": "integer",
                                                         "example": 1
+                                                    },
+                                                    "subcategories": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "integer",
+                                                            "example": 1
+                                                        },
+                                                        "example": "Array of subcategory IDs"
                                                     }
                                                 },
                                                 "type": "object"
@@ -155,6 +163,13 @@
                                             "manufacturer_id": {
                                                 "type": "integer",
                                                 "example": 1
+                                            },
+                                            "subcategories": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                }
                                             }
                                         },
                                         "type": "object"
@@ -226,6 +241,14 @@
                                                 "manufacturer_id": {
                                                     "type": "integer",
                                                     "example": 1
+                                                },
+                                                "subcategories": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "example": "Array of subcategory IDs"
                                                 }
                                             },
                                             "type": "object"
@@ -322,6 +345,13 @@
                                                     "manufacturer_id": {
                                                         "type": "integer",
                                                         "example": 1
+                                                    },
+                                                    "subcategories": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "integer",
+                                                            "example": 1
+                                                        }
                                                     }
                                                 },
                                                 "type": "object"
@@ -409,6 +439,13 @@
                                             "manufacturer_id": {
                                                 "type": "integer",
                                                 "example": 1
+                                            },
+                                            "subcategories": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                }
                                             }
                                         },
                                         "type": "object"
@@ -482,6 +519,13 @@
                                                     "manufacturer_id": {
                                                         "type": "integer",
                                                         "example": 1
+                                                    },
+                                                    "subcategories": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "integer",
+                                                            "example": 1
+                                                        }
                                                     }
                                                 },
                                                 "type": "object"
@@ -862,13 +906,20 @@
                                                         "type": "integer",
                                                         "example": 15
                                                     },
-                                                    "class_id": {
+                                                    "group_id": {
                                                         "type": "integer",
                                                         "example": 5
                                                     },
                                                     "manufacturer_id": {
                                                         "type": "integer",
                                                         "example": 1
+                                                    },
+                                                    "subcategories": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "integer",
+                                                            "example": 1
+                                                        }
                                                     }
                                                 },
                                                 "type": "object"
@@ -924,13 +975,20 @@
                                                 "type": "integer",
                                                 "example": 15
                                             },
-                                            "class_id": {
+                                            "group_id": {
                                                 "type": "integer",
                                                 "example": 5
                                             },
                                             "manufacturer_id": {
                                                 "type": "integer",
                                                 "example": 1
+                                            },
+                                            "subcategories": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                }
                                             }
                                         },
                                         "type": "object"
@@ -979,13 +1037,20 @@
                                                     "type": "integer",
                                                     "example": 15
                                                 },
-                                                "class_id": {
+                                                "group_id": {
                                                     "type": "integer",
                                                     "example": 5
                                                 },
                                                 "manufacturer_id": {
                                                     "type": "integer",
                                                     "example": 1
+                                                },
+                                                "subcategories": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    }
                                                 }
                                             },
                                             "type": "object"
@@ -1059,13 +1124,20 @@
                                                         "type": "integer",
                                                         "example": 15
                                                     },
-                                                    "class_id": {
+                                                    "group_id": {
                                                         "type": "integer",
                                                         "example": 5
                                                     },
                                                     "manufacturer_id": {
                                                         "type": "integer",
                                                         "example": 1
+                                                    },
+                                                    "subcategories": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "integer",
+                                                            "example": 1
+                                                        }
                                                     }
                                                 },
                                                 "type": "object"
@@ -1130,13 +1202,20 @@
                                                 "type": "integer",
                                                 "example": 15
                                             },
-                                            "class_id": {
+                                            "group_id": {
                                                 "type": "integer",
                                                 "example": 5
                                             },
                                             "manufacturer_id": {
                                                 "type": "integer",
                                                 "example": 1
+                                            },
+                                            "subcategories": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                }
                                             }
                                         },
                                         "type": "object"
@@ -1187,13 +1266,20 @@
                                                         "type": "integer",
                                                         "example": 15
                                                     },
-                                                    "class_id": {
+                                                    "group_id": {
                                                         "type": "integer",
                                                         "example": 5
                                                     },
                                                     "manufacturer_id": {
                                                         "type": "integer",
                                                         "example": 1
+                                                    },
+                                                    "subcategories": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "integer",
+                                                            "example": 1
+                                                        }
                                                     }
                                                 },
                                                 "type": "object"
@@ -1221,6 +1307,284 @@
                         "name": "drone",
                         "in": "path",
                         "description": "ID of drone",
+                        "required": true,
+                        "example": 1
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Done"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Something went wrong"
+                    }
+                }
+            }
+        },
+        "/api/groups": {
+            "get": {
+                "tags": [
+                    "Group for drones"
+                ],
+                "summary": "List of groups",
+                "operationId": "fdb77d01d67df2d911889889badf1beb",
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "name": {
+                                                        "type": "string",
+                                                        "example": "Drones"
+                                                    },
+                                                    "description": {
+                                                        "type": "string",
+                                                        "example": "Some description"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Group for drones"
+                ],
+                "summary": "Create new group",
+                "operationId": "dfc7b40791a8b6ea87c1706a42de23f1",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "name": {
+                                                "type": "string",
+                                                "example": "Drones"
+                                            },
+                                            "description": {
+                                                "type": "string",
+                                                "example": "Some description"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Group added successfully",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "name": {
+                                                    "type": "string",
+                                                    "example": "Drones"
+                                                },
+                                                "description": {
+                                                    "type": "string",
+                                                    "example": "Some description"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            }
+        },
+        "/api/groups/{group}": {
+            "get": {
+                "tags": [
+                    "Group for drones"
+                ],
+                "summary": "Individual group",
+                "operationId": "8b80815d172e2a9f7af616bcfcd6a2b9",
+                "parameters": [
+                    {
+                        "name": "group",
+                        "in": "path",
+                        "description": "ID of group",
+                        "required": true,
+                        "example": 1
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "name": {
+                                                        "type": "string",
+                                                        "example": "Drones"
+                                                    },
+                                                    "description": {
+                                                        "type": "string",
+                                                        "example": "Some description"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Group for drones"
+                ],
+                "summary": "Update group data",
+                "operationId": "f5ad96bbb4deb0fe1819c587f32b241f",
+                "parameters": [
+                    {
+                        "name": "group",
+                        "in": "path",
+                        "description": "ID of group",
+                        "required": true,
+                        "example": 1
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "allOf": [
+                                    {
+                                        "properties": {
+                                            "name": {
+                                                "type": "string",
+                                                "example": "Drones"
+                                            },
+                                            "description": {
+                                                "type": "string",
+                                                "example": "Some description"
+                                            }
+                                        },
+                                        "type": "object"
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Ok",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "name": {
+                                                        "type": "string",
+                                                        "example": "Drones"
+                                                    },
+                                                    "description": {
+                                                        "type": "string",
+                                                        "example": "Some description"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation errors"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Group for drones"
+                ],
+                "summary": "Delete group",
+                "operationId": "27284cacc9b7f40abfc1c5a9a962f4a8",
+                "parameters": [
+                    {
+                        "name": "group",
+                        "in": "path",
+                        "description": "ID of group",
                         "required": true,
                         "example": 1
                     }
