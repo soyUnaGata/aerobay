@@ -36,7 +36,8 @@ class DroneController extends Controller
      */
     public function show(Drone $drone)
     {
-        return DroneResource::make($drone);
+        $drone->load('subcategories');
+        return response()->json(['drone' => $drone], 200);
     }
 
 
@@ -49,8 +50,9 @@ class DroneController extends Controller
         $drone->update($data);
 
         $subcategories = $data['subcategories'];
-        $drone->subcategories()->detach($subcategories);
+        $drone->subcategories()->detach();
         $drone->subcategories()->attach($subcategories);
+        $drone->load('subcategories');
 
         return $drone;
     }

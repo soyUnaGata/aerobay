@@ -21,4 +21,9 @@ class Drone extends Model
         'group_id',
         'manufacturer_id'
     ];
+
+    public function subcategories()
+    {
+        return $this->belongsToMany(Subcategory::class, 'drones_subcategory');
+    }
 }

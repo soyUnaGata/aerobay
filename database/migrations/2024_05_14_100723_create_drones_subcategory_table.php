@@ -10,10 +10,12 @@ return new class extends Migration {
      */
     public function up(): void
     {
-        Schema::create('drones_groups', function (Blueprint $table) {
+        Schema::create('drones_subcategory', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('group_id');
+            $table->unsignedBigInteger('group_id')->nullable();
             $table->unsignedBigInteger('subcategory_id');
+            $table->unsignedBigInteger('drone_id');
+
 
             $table->foreign('group_id')->references('id')->on('groups')->onDelete('cascade');
             $table->foreign('subcategory_id')->references('id')->on('subcategories')->onDelete('cascade');
@@ -25,6 +27,6 @@ return new class extends Migration {
      */
     public function down(): void
     {
-        Schema::dropIfExists('drones_groups');
+        Schema::dropIfExists('drones_subcategory');
     }
 };
