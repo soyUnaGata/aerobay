@@ -26,11 +26,7 @@ use App\Http\Controllers\Controller;
  *                      @OA\Property(property="amount", type="integer", example=15),
  *                      @OA\Property(property="category_id", type="integer", example=5),
  *                      @OA\Property(property="manufacturer_id", type="integer", example=1),
- *                      @OA\Property(property="subcategories", type="array",
- *                          @OA\Items(
- *                               type="integer",
- *                               example=1
- *                             )),
+ *                      @OA\Property(property="subcategories", type="array", @OA\Items(type="integer", example=1)),
  *                  )
  *              }
  *          )
@@ -53,11 +49,8 @@ use App\Http\Controllers\Controller;
  *                  @OA\Property(property="amount", type="integer", example=15),
  *                  @OA\Property(property="category_id", type="integer", example=5),
  *                  @OA\Property(property="manufacturer_id", type="integer", example=1),
- *                  @OA\Property(property="subcategories", type="array",
- *                           @OA\Items(
- *                                type="integer",
- *                                example=1
- *                              ), example="Array of subcategory IDs"),
+ *                  @OA\Property(property="subcategories", type="array", @OA\Items(type="integer", example=1)),
+ *
  *              )
  *          )
  *      ),
@@ -87,11 +80,7 @@ use App\Http\Controllers\Controller;
  *                   @OA\Property(property="amount", type="integer", example=15),
  *                   @OA\Property(property="category_id", type="integer", example=5),
  *                   @OA\Property(property="manufacturer_id", type="integer", example=1),
- *                   @OA\Property(property="subcategories", type="array",
- *                           @OA\Items(
- *                                type="integer",
- *                                example=1
- *                              ), example="Array of subcategory IDs"),
+ *                   @OA\Property(property="subcategories", type="array", @OA\Items(type="integer", example=1)),
  *               )
  *              )
  *           )
