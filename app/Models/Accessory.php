@@ -7,10 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use  Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use App\Models\Manufacture;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Accessory extends Model
 {
     use HasFactory;
+    use SoftDeletes;
 
     protected $guarded = false;
     protected $hidden = ['pivot'];

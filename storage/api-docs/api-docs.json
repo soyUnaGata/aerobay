@@ -83,8 +83,7 @@
                                                         "items": {
                                                             "type": "integer",
                                                             "example": 1
-                                                        },
-                                                        "example": "Array of subcategory IDs"
+                                                        }
                                                     }
                                                 },
                                                 "type": "object"
@@ -247,8 +246,7 @@
                                                     "items": {
                                                         "type": "integer",
                                                         "example": 1
-                                                    },
-                                                    "example": "Array of subcategory IDs"
+                                                    }
                                                 }
                                             },
                                             "type": "object"

@@ -51,9 +51,9 @@ class SubcategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Subcategory $subcategories)
+    public function destroy(Subcategory $subcategory)
     {
-        $subcategories->delete();
+        $subcategory->delete();
         return response()->json(['message' => 'done'], 204);
     }
 }
