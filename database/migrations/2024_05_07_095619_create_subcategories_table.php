@@ -17,6 +17,7 @@ return new class extends Migration {
             $table->foreignId('category_id')->nullable()->index()->constrained('categories')->onDelete('cascade');
             $table->foreignId('group_id')->nullable()->index()->constrained('groups')->onDelete('cascade');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

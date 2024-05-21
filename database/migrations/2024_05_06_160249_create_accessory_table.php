@@ -27,6 +27,8 @@ return new class extends Migration {
             $table->foreignId('manufacturer_id')->nullable()->index()->constrained('manufactures')->onDelete('cascade');;
 
             $table->timestamps();
+
+            $table->softDeletes();
         });
     }
 

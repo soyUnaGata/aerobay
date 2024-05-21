@@ -17,6 +17,7 @@ return new class extends Migration {
 
             $table->foreign('accessory_id')->references('id')->on('accessories')->onDelete('cascade');
             $table->foreign('subcategory_id')->references('id')->on('subcategories')->onDelete('cascade');
+            $table->softDeletes();
         });
     }
 

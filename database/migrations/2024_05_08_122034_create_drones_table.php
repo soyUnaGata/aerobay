@@ -22,6 +22,7 @@ return new class extends Migration {
             $table->foreignId('group_id')->nullable()->index()->constrained('groups');
             $table->foreignId('manufacturer_id')->nullable()->index()->constrained('manufactures');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
