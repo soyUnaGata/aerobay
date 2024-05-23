@@ -72,17 +72,17 @@
                                                     },
                                                     "category_id": {
                                                         "type": "integer",
-                                                        "example": 5
+                                                        "example": 0
                                                     },
                                                     "manufacturer_id": {
                                                         "type": "integer",
-                                                        "example": 1
+                                                        "example": 0
                                                     },
                                                     "subcategories": {
                                                         "type": "array",
                                                         "items": {
                                                             "type": "integer",
-                                                            "example": 1
+                                                            "example": 0
                                                         }
                                                     }
                                                 },
@@ -157,17 +157,17 @@
                                             },
                                             "category_id": {
                                                 "type": "integer",
-                                                "example": 5
+                                                "example": 0
                                             },
                                             "manufacturer_id": {
                                                 "type": "integer",
-                                                "example": 1
+                                                "example": 0
                                             },
                                             "subcategories": {
                                                 "type": "array",
                                                 "items": {
                                                     "type": "integer",
-                                                    "example": 1
+                                                    "example": 0
                                                 }
                                             }
                                         },
@@ -235,17 +235,17 @@
                                                 },
                                                 "category_id": {
                                                     "type": "integer",
-                                                    "example": 5
+                                                    "example": 0
                                                 },
                                                 "manufacturer_id": {
                                                     "type": "integer",
-                                                    "example": 1
+                                                    "example": 0
                                                 },
                                                 "subcategories": {
                                                     "type": "array",
                                                     "items": {
                                                         "type": "integer",
-                                                        "example": 1
+                                                        "example": 0
                                                     }
                                                 }
                                             },
@@ -338,17 +338,17 @@
                                                     },
                                                     "category_id": {
                                                         "type": "integer",
-                                                        "example": 5
+                                                        "example": 0
                                                     },
                                                     "manufacturer_id": {
                                                         "type": "integer",
-                                                        "example": 1
+                                                        "example": 0
                                                     },
                                                     "subcategories": {
                                                         "type": "array",
                                                         "items": {
                                                             "type": "integer",
-                                                            "example": 1
+                                                            "example": 0
                                                         }
                                                     }
                                                 },
@@ -432,17 +432,17 @@
                                             },
                                             "category_id": {
                                                 "type": "integer",
-                                                "example": 5
+                                                "example": 0
                                             },
                                             "manufacturer_id": {
                                                 "type": "integer",
-                                                "example": 1
+                                                "example": 0
                                             },
                                             "subcategories": {
                                                 "type": "array",
                                                 "items": {
                                                     "type": "integer",
-                                                    "example": 1
+                                                    "example": 0
                                                 }
                                             }
                                         },
@@ -512,17 +512,17 @@
                                                     },
                                                     "category_id": {
                                                         "type": "integer",
-                                                        "example": 5
+                                                        "example": 0
                                                     },
                                                     "manufacturer_id": {
                                                         "type": "integer",
-                                                        "example": 1
+                                                        "example": 0
                                                     },
                                                     "subcategories": {
                                                         "type": "array",
                                                         "items": {
                                                             "type": "integer",
-                                                            "example": 1
+                                                            "example": 0
                                                         }
                                                     }
                                                 },
@@ -906,17 +906,17 @@
                                                     },
                                                     "group_id": {
                                                         "type": "integer",
-                                                        "example": 5
+                                                        "example": 0
                                                     },
                                                     "manufacturer_id": {
                                                         "type": "integer",
-                                                        "example": 1
+                                                        "example": 0
                                                     },
                                                     "subcategories": {
                                                         "type": "array",
                                                         "items": {
                                                             "type": "integer",
-                                                            "example": 1
+                                                            "example": 0
                                                         }
                                                     }
                                                 },
@@ -975,17 +975,17 @@
                                             },
                                             "group_id": {
                                                 "type": "integer",
-                                                "example": 5
+                                                "example": 0
                                             },
                                             "manufacturer_id": {
                                                 "type": "integer",
-                                                "example": 1
+                                                "example": 0
                                             },
                                             "subcategories": {
                                                 "type": "array",
                                                 "items": {
                                                     "type": "integer",
-                                                    "example": 1
+                                                    "example": 0
                                                 }
                                             }
                                         },
@@ -1037,17 +1037,17 @@
                                                 },
                                                 "group_id": {
                                                     "type": "integer",
-                                                    "example": 5
+                                                    "example": 0
                                                 },
                                                 "manufacturer_id": {
                                                     "type": "integer",
-                                                    "example": 1
+                                                    "example": 0
                                                 },
                                                 "subcategories": {
                                                     "type": "array",
                                                     "items": {
                                                         "type": "integer",
-                                                        "example": 1
+                                                        "example": 0
                                                     }
                                                 }
                                             },
@@ -1124,17 +1124,17 @@
                                                     },
                                                     "group_id": {
                                                         "type": "integer",
-                                                        "example": 5
+                                                        "example": 0
                                                     },
                                                     "manufacturer_id": {
                                                         "type": "integer",
-                                                        "example": 1
+                                                        "example": 0
                                                     },
                                                     "subcategories": {
                                                         "type": "array",
                                                         "items": {
                                                             "type": "integer",
-                                                            "example": 1
+                                                            "example": 0
                                                         }
                                                     }
                                                 },
@@ -1202,17 +1202,17 @@
                                             },
                                             "group_id": {
                                                 "type": "integer",
-                                                "example": 5
+                                                "example": 0
                                             },
                                             "manufacturer_id": {
                                                 "type": "integer",
-                                                "example": 1
+                                                "example": 0
                                             },
                                             "subcategories": {
                                                 "type": "array",
                                                 "items": {
                                                     "type": "integer",
-                                                    "example": 1
+                                                    "example": 0
                                                 }
                                             }
                                         },
@@ -1266,17 +1266,17 @@
                                                     },
                                                     "group_id": {
                                                         "type": "integer",
-                                                        "example": 5
+                                                        "example": 0
                                                     },
                                                     "manufacturer_id": {
                                                         "type": "integer",
-                                                        "example": 1
+                                                        "example": 0
                                                     },
                                                     "subcategories": {
                                                         "type": "array",
                                                         "items": {
                                                             "type": "integer",
-                                                            "example": 1
+                                                            "example": 0
                                                         }
                                                     }
                                                 },
