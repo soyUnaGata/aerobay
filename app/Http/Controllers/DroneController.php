@@ -23,12 +23,12 @@ class DroneController extends Controller
     {
         $data = $request->validated();
         $drone = Drone::create($data);
-        DroneResource::make($drone);
 
         $subcategories = $data['subcategories'];
         $drone->subcategories()->attach($subcategories);
+        $drone->load('subcategories');
 
-        return $drone;
+        return response()->json($drone, 201);
     }
 
     /**
@@ -50,11 +50,11 @@ class DroneController extends Controller
         $drone->update($data);
 
         $subcategories = $data['subcategories'];
-        $drone->subcategories()->detach();
-        $drone->subcategories()->attach($subcategories);
+        $drone->subcategories()->sync($subcategories);
         $drone->load('subcategories');
 
-        return $drone;
+//        return $drone;
+        return response()->json(['drone' => $drone], 200);
     }
 
     /**
