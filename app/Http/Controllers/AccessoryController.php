@@ -28,13 +28,12 @@ class AccessoryController extends Controller
     {
         $data = $request->validated();
         $accessory = Accessory::create($data);
-        AccessoryResource::make($accessory);
 
         $subcategories = $data['subcategories'];
         $accessory->subcategories()->attach($subcategories);
 
         $accessory->load('subcategories');
-        return $accessory;
+        return response()->json($accessory, 201);
     }
 
     /**
@@ -42,11 +41,7 @@ class AccessoryController extends Controller
      */
     public function show(Accessory $accessory)
     {
-//        $accessory->with('subcategories')->get();
         $accessory->load('subcategories');
-//        AccessoryResource::make($accessory);
-//
-//        dd(response()->json(['accessory' => $accessory], 200));
         return response()->json(['accessory' => $accessory], 200);
     }
 
@@ -59,13 +54,12 @@ class AccessoryController extends Controller
         $accessory->update($data);
 
         $subcategories = $data['subcategories'];
-        $accessory->subcategories()->detach();
-        $accessory->subcategories()->attach($subcategories);
+        $accessory->subcategories()->sync($subcategories);
         $accessory->load('subcategories');
 
-//        dd($accessory->load('subcategories'));
 
-        return $accessory;
+//        return $accessory;
+        return response()->json($accessory, 201);
     }
 
     /**
