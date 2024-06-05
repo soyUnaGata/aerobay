@@ -19,7 +19,6 @@ return new class extends Migration {
             $table->string('image_url')->nullable();
             $table->string('dimensions')->nullable();
             $table->string('weight')->nullable();
-            $table->string('color')->nullable();
             $table->string('type')->nullable();
             $table->integer('amount')->nullable(0);
 
