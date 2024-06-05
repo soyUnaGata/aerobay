@@ -23,8 +23,7 @@ class AccessoryResource extends JsonResource
             'image_url' => $this->image_url,
             'dimensions' => $this->dimensions,
             'weight' => $this->weight,
-            'color'=> $this->color,
-            'type'=> $this->type,
+            'type' => $this->type,
             'category_id' => $this->category_id,
             'manufacturer_id' => $this->manufacturer_id,
         ];

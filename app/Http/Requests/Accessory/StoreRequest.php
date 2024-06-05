@@ -29,7 +29,6 @@ class StoreRequest extends FormRequest
             'image_url' => 'nullable|url',
             'dimensions' => 'nullable|string',
             'weight' => 'nullable|string',
-            'color' => 'nullable|string',
             'type' => 'nullable|string',
             'amount' => 'nullable|integer',
             'category_id' => 'integer|nullable',

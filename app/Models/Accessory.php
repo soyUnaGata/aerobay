@@ -23,7 +23,6 @@ class Accessory extends Model
         'image_url',
         'dimensions',
         'weight',
-        'color',
         'type',
         'amount',
         'category_id',

@@ -58,10 +58,6 @@
                                                         "type": "string",
                                                         "example": "1200g"
                                                     },
-                                                    "color": {
-                                                        "type": "string",
-                                                        "example": "Black"
-                                                    },
                                                     "type": {
                                                         "type": "string",
                                                         "example": "Camera"
@@ -143,10 +139,6 @@
                                                 "type": "string",
                                                 "example": "1200g"
                                             },
-                                            "color": {
-                                                "type": "string",
-                                                "example": "Black"
-                                            },
                                             "type": {
                                                 "type": "string",
                                                 "example": "Camera"
@@ -220,10 +212,6 @@
                                                 "weight": {
                                                     "type": "string",
                                                     "example": "1200g"
-                                                },
-                                                "color": {
-                                                    "type": "string",
-                                                    "example": "Black"
                                                 },
                                                 "type": {
                                                     "type": "string",
@@ -324,10 +312,6 @@
                                                         "type": "string",
                                                         "example": "1200g"
                                                     },
-                                                    "color": {
-                                                        "type": "string",
-                                                        "example": "Black"
-                                                    },
                                                     "type": {
                                                         "type": "string",
                                                         "example": "Camera"
@@ -418,10 +402,6 @@
                                                 "type": "string",
                                                 "example": "1200g"
                                             },
-                                            "color": {
-                                                "type": "string",
-                                                "example": "Black"
-                                            },
                                             "type": {
                                                 "type": "string",
                                                 "example": "Camera"
@@ -497,10 +477,6 @@
                                                     "weight": {
                                                         "type": "string",
                                                         "example": "1200g"
-                                                    },
-                                                    "color": {
-                                                        "type": "string",
-                                                        "example": "Black"
                                                     },
                                                     "type": {
                                                         "type": "string",
