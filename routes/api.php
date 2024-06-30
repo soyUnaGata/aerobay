@@ -9,7 +9,7 @@ use App\Http\Controllers\AccessoryController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ManufactureController;
 
-Route::prefix('v1')->middleware(['auth:sanctum'])->group(function () {
+Route::middleware(['auth:sanctum'])->group(function () {
     Route::apiResource('accessories', AccessoryController::class);
 
     Route::apiResource('categories', CategoryController::class);
