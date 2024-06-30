@@ -9,14 +9,18 @@ use App\Http\Controllers\AccessoryController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ManufactureController;
 
-Route::apiResource('accessories', AccessoryController::class);
+Route::prefix('v1')->middleware(['auth:sanctum'])->group(function () {
+    Route::apiResource('accessories', AccessoryController::class);
 
-Route::apiResource('categories', CategoryController::class);
+    Route::apiResource('categories', CategoryController::class);
 
-Route::apiResource('manufactures', ManufactureController::class);
+    Route::apiResource('manufactures', ManufactureController::class);
 
-Route::apiResource('subcategory', SubcategoryController::class);
+    Route::apiResource('subcategory', SubcategoryController::class);
 
-Route::apiResource('drones', DroneController::class);
+    Route::apiResource('drones', DroneController::class);
 
-Route::apiResource('groups', GroupController::class);
+    Route::apiResource('groups', GroupController::class);
+});
+
+
