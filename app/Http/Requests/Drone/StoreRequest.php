@@ -28,9 +28,9 @@ class StoreRequest extends FormRequest
             'discount' => 'nullable|numeric',
             'image_url' => 'nullable|url',
             'amount' => 'nullable|integer',
-            'group_id' => 'integer',
-            'manufacturer_id' => 'integer',
-            'subcategories' => 'array'
+            'group_id' => 'nullable|integer',
+            'manufacturer_id' => 'nullable|integer',
+            'subcategories' => 'nullable|array'
         ];
     }
 }

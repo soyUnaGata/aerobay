@@ -24,7 +24,8 @@ class StoreRequest extends FormRequest
         return [
             'name' => 'string',
             'value' => 'string',
-            'category_id' => 'integer'
+            'category_id' => 'nullable|integer',
+            'group_id' => 'nullable|integer'
         ];
     }
 }

@@ -19,6 +19,7 @@ class Subcategory extends Model
         'name',
         'value',
         'category_id',
+        'group_id'
     ];
 
     public function accessories(): BelongsToMany
