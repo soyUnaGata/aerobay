@@ -21,7 +21,8 @@ class Drone extends Model
         'image_url',
         'amount',
         'group_id',
-        'manufacturer_id'
+        'manufacturer_id',
+        'subcategories'
     ];
 
     public function subcategories()
